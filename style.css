@@ -1,8 +1,9 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Bangers', cursive;
 }
 
 body{
@@ -10,6 +11,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background: rgba(154, 163, 173, .6);
 }
 
 section{
@@ -41,13 +43,16 @@ section .card .box{
 
 }
 
+section .card:hover .box{
+    transform: rotateY(180deg);
+}
+
 section .card .box .imgBx{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    
 }
 
 section .card .box .imgBx img{
@@ -56,7 +61,10 @@ section .card .box .imgBx img{
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
+    object-fit: fill;
+    border-radius: 13px;
+    border: .5 solid crimson;
 }
 
 section .card .box .contentBx{
@@ -65,27 +73,52 @@ section .card .box .contentBx{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #333;
+    transform-style: preserve-3d;
+    /* background: #333 !important; */
     backface-visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    
+
 }
 
 section .card .box .contentBx div{
     transform-style: preserve-3d;
-    padding: 20px;
-    background: linear-gradient(45deg, #fe0061, #ffeb3b);
+    padding: 45px;
+    background: slateblue;
     transform: translateZ(100px);
+    border-radius: 10px;
+    text-shadow: .3px .5px .75px black;
+}
+
+section .card .box .contentBx div.two{
+    background: goldenrod;
+}
+section .card .box .contentBx div.three{
+    background: darkolivegreen;
+}
+section .card .box .contentBx div.four{
+    background: red;
+}
+section .card .box .contentBx div.five{
+    background: purple;
+}
+section .card .box .contentBx div.six{
+    background: orange;
 }
 
 section .card .box .contentBx div h2{
-    color: #fff;
+    color: #f5f5f5;
     font-style: 20px;
     letter-spacing: 1px;
 }
 
-section .card .box .contentBx div{
-    color: #fff;
+section .card .box .contentBx div p{
+    color: ghostwhite;
+    font-size: 1rem;
+    letter-spacing: 1px;
+
 }
+
